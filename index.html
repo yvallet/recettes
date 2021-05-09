@@ -1,0 +1,181 @@
+<!DOCTYPE html html>
+<html lang="fr">
+
+    <head>
+        <title>Recettes</title>
+        <meta charset="UTF-8">
+
+        <!--  application style css inline ,   on l'applique a tout le body { }   -->
+        <!--  application style css inline ,   on l'applique a p{ } = a tous les paragraphes   --> 
+        <!--  application style css inline ,   on l'applique a p#nom_id{ } = PARAGRAPHE portant cet id nom_id -->
+        <!--  application sans le p devant le # ,   on l'applique a #nom_id{ } = appliqé a TOUT ce qui porte cet id , pas seulement les p paragraphes  -->
+        <!--  application a une liste ,                           ul#nom_id{ } = appliqé aux LISTES ul  qui porte cet id   -->
+
+        <!-- memes principe avec les classes -->
+        <!-- affectation d'un nom de classe    <p class="nom_classe">texte gggjgjg</p>      <h1 class="nom_classe">texte aaaaaaaa<\h1>      -->
+        <!-- appliquer un style a une  classes          p.nom_classe { propriétés }  -->
+        <!-- appliquer a toutes les classes de ce nom    .nom_classe { proprietes } -->
+        <!-- appliquer un style a                       p.nom_classe , h1 , h2.nom_classe2 { propriétés }         -->
+        <!--                             les paragraphe portant ce nom + Tous les h1 + les h2 portant ce nom     -->
+        <!-- margin : Haut Droite Bas Gauche , sinon utiliser margin-top , margin-rigth, margin-left, margin-bottom -->
+        <!-- padding meme fonctionnement = marges a l'interieur de mon contenu si un seul param = pour les 4 cotes   -->
+
+        <!-- avec lien vers le fichier de style -->
+
+        <link rel="stylesheet" href="recette.css">
+
+
+        <!-- toute cette partie style a été mise dans recette+css   
+        <style>
+
+         
+        </style>
+        -->
+
+    </head>
+
+    <body>
+       
+        <div class="contenu">
+            
+            <div class="centre recette_div">
+                <p class="recette_par">Recette</p>
+            </div>
+        
+            <!--     ajout propriété dans la balise h1          -->
+            <h1>gateau au chocolat</h1>
+
+            <!--     trait de separation          -->
+            <hr class="trait">
+
+            <div class="separateur2"></div>             
+
+            <!--     trait de separation          
+            <hr style="width:30%;
+                       text-align:
+                       margin-left:0">
+            -->
+
+            <div class="centre">
+                <p class="description">voici une excellente recette de grand' mere, tres facile a réaliser, et qui fera plaisir aux enfants et a toute la famille</p>
+            </div>
+
+            <div class="centre">
+                <p id="nom_paragraphe">voici une excellente recette de grand' mere, tres facile a realiser</p>
+            </div>
+
+            <br><br>
+        
+            <!-- on fait un container "info" avec limage et la table pour pouvoir POSitionner la table dans l'image  -->
+            <!-- info existe comme div.info , img.info , et table.info -->
+            <div class="info">
+
+                <!--     avec le width 100% l'image occupe 100 de l'espace et ne deborde pas -->
+                
+                <!-- <img class="info" src="gateau.jpg"> -->
+
+                <img class="info" src="https://jonathanroux.com/gateau.jpg?id=1234">
+                <!--                                                      ?id=1234 on lui passe un param quelconque , force a recharger l'image -->
+
+                <table class="info"> 
+                    <tr>
+                        <th>Difficulté</th>
+                        <th>Préparation</th>
+                        <th>Cuisson</th>
+                        <th>Temps total</th>
+                    </tr>
+                    <tr>
+                        <td>Facile</td>
+                        <td>10 Minutes</td>
+                        <td>20 Minutes</td>
+                        <td>30 Minutes</td>
+                    </tr>                
+                </table>
+            </div>
+
+            <br>
+            
+            
+            <!--    les listes
+                liste non ordonnes  unordered list  ul
+                liste ordonnees     ordered list    ol
+                    contiennent des items  dans des   <li> texte </li>
+                NB possible : <ul #nom_id>   pour lui donner un id , comme le paragraphe
+            -->
+            <div class="colonel">
+
+                <div class="colonne1 colonne">
+                    <h2>Voici la liste des ingrédients</h2>
+                    <div id="ingredients">
+                        <p>Chocolat noir 100 g</p>
+                        <p>12 Oeufs</p>
+                        <p>Farine un kilo</p>
+                        <p>Sucre : un bol</p>
+                        <p>Lait : un seau</p>
+                    </div>
+                </div>
+                
+                <!--                                          
+                <div class="colonne2 colonne">
+                    <h2>Préparation</h2>
+                    <div id="prepar">
+                        <p>Faire fondre le chocolat</p>
+                        <p>Ajouter les jaunes d'oeuf</p>
+                        <p>Ajouter le sucre et le lait</p>
+                        <p>Mélanger avec un mixer</p>
+                        <p>Mettre au four 45 minutes</p>
+                    </div>
+                </div>
+                -->
+
+                <!--                                 -->
+                <div class="matable">
+                    <h2>Preparation</h2>
+                    <table class="ma_tab">
+                         
+                        <tr class="ligne">
+                            <td class="lig"> <span class="num">1</span>  Faire fondre le chocolat</td>
+                        </tr>
+                        <tr class="ligne">
+                            <td class="lig"> <span class="num">2</span>  Ajouter les oeufs</td>
+                             
+                        </tr>
+                        <tr class="ligne">
+                            <td class="lig"> <span class="num">3</span>  Ajouter le sucre et le lait</td>
+                           
+                        </tr>
+                        <tr class="ligne">
+                            <td class="lig"> <span class="num">4</span>  Melanger au mixeur</td>
+                             
+                        </tr>
+                        <tr class="ligne">
+                            <td class="lig"> <span class="num">5</span>  Mettre au four 45 minutes</td>
+                              
+                        </tr>   
+                         
+                        <tr class="ligne">
+                            <td class="lig"> <span class="num">6</span>  Demouler</td>
+                            
+                           
+                        </tr>
+                        <tr class="ligne">
+                               <td class="lig"> <span class="num">7</span>  couper en 4 partss</td>
+                                
+                        </tr>   
+                         
+                        <tr class="ligne">
+                            <td class="lig"> <span class="num">8</span>  Deguster</td>
+                            
+                        </tr>   
+                    </table>
+                </div>
+                
+
+
+
+            </div>  
+
+        </div>
+
+    </body>
+</html>
